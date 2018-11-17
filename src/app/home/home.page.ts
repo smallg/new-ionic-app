@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,9 +9,19 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-    constructor(private router: Router, private navCtrl: NavController) {
+    constructor(private router: Router, private navCtrl: NavController, private alertController: AlertController) {
     }
 
+    async presentAlert() {
+        const alert = await this.alertController.create({
+            header: 'Alert',
+            subHeader: 'Subtitle',
+            message: 'This is an alert message.',
+            buttons: ['OK']
+        });
+
+        await alert.present();
+    }
 
     gotoList() {
         // this.router.navigateByUrl('/show-list');

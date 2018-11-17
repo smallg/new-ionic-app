@@ -1,10 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>show-list</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>show-list</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
     <ion-button class="back" (click)="goBack()">Go Back</ion-button>
-    <ion-button href="/show-list/123">1</ion-button>
+    <ion-button href="/show-list/123">detail page</ion-button>
 </ion-content>
